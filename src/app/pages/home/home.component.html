@@ -2,7 +2,7 @@
     <div class="row">
         @for (user of users; track $index){
            <div class="col">
-            <app-card></app-card>
+            <app-card>[user]="user"</app-card>
            </div>
       } 
     </div>

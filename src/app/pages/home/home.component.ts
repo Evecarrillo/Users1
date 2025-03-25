@@ -14,8 +14,11 @@ export  default class HomeComponent {
   UsersService = inject(UsersService);
 
   ngOnInit(){
-     this.UsersService.getUsers().then((data) => { 
-      this.users = data;
-     });
-  }
+     this.getUsers();
+     }
+  
+ async getUsers (){
+  this.users = await this.UsersService.getUsers();
+ }
+
 }
