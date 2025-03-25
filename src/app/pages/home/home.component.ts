@@ -16,6 +16,6 @@ export  default class HomeComponent {
   ngOnInit(){
      this.UsersService.getUsers().then((data) => { 
       this.users = data;
-     })
+     });
   }
 }
